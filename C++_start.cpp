@@ -202,8 +202,42 @@ int main(){
 	return 0;
 }
 
+// # pass by value
+//it give copy of number  not orginal so that if we print in int main no give 10,15,
+void doSomething(int num){
+	cout << num << endl;
+	num += 5;
+	cout << num << endl;
+	num += 5;
+	cout << num << endl;
+	
+}
+
+int main(){
+	int num = 10;
+	doSomething(num);
+	cout << num << endl;
+	return 0;
+}
 
 
+// # pass by reference
+// now we have given adress of num sot hat it make change in orginal 
+void doSomething(int &num){
+	cout << num << endl;
+	num += 5;
+	cout << num << endl;
+	num += 5;
+	cout << num << endl;
+	
+}
+
+int main(){
+	int num = 10;
+	doSomething(num);
+	cout << num << endl;
+	return 0;
+}
 
 
 
